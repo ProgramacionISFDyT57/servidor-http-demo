@@ -1,6 +1,8 @@
 import { Request, Response } from 'express';
 import * as express from 'express';
+import * as bodyParser from 'body-parser';
 const app = express();
+app.use(bodyParser.json());
 const port = 3000;
 
 app.get('/', (req: Request, res: Response) => {
